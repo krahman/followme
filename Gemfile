@@ -42,7 +42,16 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
-  # RSpec
+  # Use RSpec for unit testing
   gem 'rspec-rails'
+
+  # User factory_girl to setup ruby objects as test data
+  gem 'factory_girl_rails'
+end
+
+group :test do
+	# Use shoulda-matchers for validations and associations with less code
+  gem 'shoulda-matchers'
+
 end
 
