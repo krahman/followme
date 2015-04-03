@@ -47,11 +47,16 @@ group :development, :test do
 
   # User factory_girl to setup ruby objects as test data
   gem 'factory_girl_rails'
-end
 
-group :test do
-	# Use shoulda-matchers for validations and associations with less code
+  # Use shoulda-matchers for validations and associations with less code
   gem 'shoulda-matchers'
 
-end
+  # Use cucumber for automated acceptance test
+  gem 'cucumber-rails', require: false
+  
+  # Use database_cleaner to ensure a clean database state for testing
+  gem 'database_cleaner'
 
+  # Use selenium-webdriver to run cucumber scenarios which use Javascript
+  gem 'selenium-webdriver'
+end
